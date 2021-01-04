@@ -294,7 +294,7 @@ include $(BUILD_SYSTEM)/envsetup.mk
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
-include vendor/stormbreaker/config/BoardConfigStorm.mk
+include vendor/aurora/config/BoardConfigAurora.mk
 
 # The build system exposes several variables for where to find the kernel
 # headers:
@@ -1240,6 +1240,6 @@ endif
 DEFAULT_DATA_OUT_MODULES := ltp $(ltp_packages) $(kselftest_modules)
 .KATI_READONLY := DEFAULT_DATA_OUT_MODULES
 
-include vendor/stormbreaker/build/core/config.mk
+include vendor/aurora/build/core/config.mk
 
 include $(BUILD_SYSTEM)/dumpvar.mk
